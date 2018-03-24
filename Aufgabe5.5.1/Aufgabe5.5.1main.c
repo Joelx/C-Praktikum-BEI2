@@ -21,12 +21,12 @@ int main(void)
 	printf("1. Wert: %d\n", wert);
 	// 2. ob der Wert der unsigned short - Variablen u groesser als 255 ist.
 	wert = !!(u >> 8); // schiebe zahl um 8 bit nach rechts. Wenn nicht 0 zurueckbleibt, war die Zahl mindestens 256.
+	// Alternativ geht auch sowas hier:  
+	// wert = !!(u & 0x100); 
 	printf("2. Wert: %d\n", wert);
 	// 3. ob das 7.Bit (von links her gezählt) in der unsigned short-Variablen u auf 1 gesetzt ist.
 	u = 520;
 	wert = (u >> 7) & 1;
-	// Alternativ geht auch sowas hier:  
-	// wert = !!(u & 0x100); 
 	printf("3. Wert: %d\n", wert);
 	// 4. ob der Wert der short-Variablen x im Intervall [0,127] liegt.
 	x = 120;
