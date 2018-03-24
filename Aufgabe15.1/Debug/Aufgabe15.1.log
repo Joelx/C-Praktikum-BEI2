@@ -1,0 +1,5 @@
+﻿  harmon.c
+c:\users\joe\source\repos\informatikpraktikum\aufgabe15.1\harmon.c(22): warning C4244: "+=": Konvertierung von "double" in "float", möglicher Datenverlust
+c:\users\joe\source\repos\informatikpraktikum\aufgabe15.1\harmon.c(19): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.16299.0\ucrt\stdio.h(1272): note: Siehe Deklaration von "scanf"
+  Aufgabe15.1.vcxproj -> C:\Users\Joe\source\repos\InformatikPraktikum\Debug\Aufgabe15.1.exe

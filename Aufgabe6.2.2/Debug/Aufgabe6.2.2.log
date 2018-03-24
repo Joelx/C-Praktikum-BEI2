@@ -1,0 +1,10 @@
+﻿  benzinv.c
+c:\users\joe\source\repos\informatikpraktikum\aufgabe6.2.2\benzinv.c(17): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.16299.0\ucrt\stdio.h(1272): note: Siehe Deklaration von "scanf"
+c:\users\joe\source\repos\informatikpraktikum\aufgabe6.2.2\benzinv.c(19): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.16299.0\ucrt\stdio.h(1272): note: Siehe Deklaration von "scanf"
+c:\users\joe\source\repos\informatikpraktikum\aufgabe6.2.2\benzinv.c(21): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.16299.0\ucrt\stdio.h(1272): note: Siehe Deklaration von "scanf"
+c:\users\joe\source\repos\informatikpraktikum\aufgabe6.2.2\benzinv.c(23): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.16299.0\ucrt\stdio.h(1272): note: Siehe Deklaration von "scanf"
+  Aufgabe6.2.2.vcxproj -> C:\Users\Joe\source\repos\InformatikPraktikum\Debug\Aufgabe6.2.2.exe

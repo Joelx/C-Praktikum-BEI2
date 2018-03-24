@@ -1,0 +1,5 @@
+﻿  bis100.c
+c:\users\joe\source\repos\informatikpraktikum\aufgabe18.1\bis100.c(20): warning C4013: "srand" undefiniert; Annahme: extern mit Rückgabetyp int
+c:\users\joe\source\repos\informatikpraktikum\aufgabe18.1\bis100.c(25): warning C4013: "system" undefiniert; Annahme: extern mit Rückgabetyp int
+c:\users\joe\source\repos\informatikpraktikum\aufgabe18.1\bis100.c(34): warning C4013: "rand" undefiniert; Annahme: extern mit Rückgabetyp int
+  Aufgabe18.1.vcxproj -> C:\Users\Joe\source\repos\InformatikPraktikum\Debug\Aufgabe18.1.exe

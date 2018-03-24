@@ -1,0 +1,3 @@
+﻿  kettenpi.c
+c:\users\joe\source\repos\informatikpraktikum\aufgabe5.2.2\kettenpi.c(9): warning C4305: "=": Verkürzung von "double" in "float"
+  Aufgabe5.2.2.vcxproj -> C:\Users\Joe\source\repos\InformatikPraktikum\Debug\Aufgabe5.2.2.exe
