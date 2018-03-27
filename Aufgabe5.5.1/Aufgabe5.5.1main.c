@@ -26,7 +26,11 @@ int main(void)
 	printf("2. Wert: %d\n", wert);
 	// 3. ob das 7.Bit (von links her gezählt) in der unsigned short-Variablen u auf 1 gesetzt ist.
 	u = 520;
-	wert = (u >> 7) & 1;
+	wert = (u >> 9) & 1; // Shift um 9 Bits nach rechts. Hatte den Zusatz "von links her gezählt" iwie überlesen. Wenn wir eine 16-Bit unsigned Short Variable um 9 Bit nach rechts schieben, ist das ehemals 7. Bit von links an der ersten Stelle von rechts. 
+	// Viel einfacher waere es wohl so: 
+	// wert = !!(u & 512);
+	// Hier wird gleich das 2^9 bit (also das 7. von links bei unsigned short) verglichen.. Finde das sieht aber doof aus. kp - ich weiss nicht, wie die Dozenten es haben wollen. Das soll hier ja nur als inspiration dienen ^^
+	// ist irgendwie eh ne bloede Aufgabe xD
 	printf("3. Wert: %d\n", wert);
 	// 4. ob der Wert der short-Variablen x im Intervall [0,127] liegt.
 	x = 120;
