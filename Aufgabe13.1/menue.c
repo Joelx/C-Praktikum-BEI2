@@ -8,16 +8,30 @@
 
 /*--- #includes ------------------------------------------------------*/
 #include <stdio.h>
+#include <ctype.h>
 
 
 int main(void)
 {
-	char eingabe;
+	char eingabe, c;
+	int valid = 0;
 
 	printf("\tHauptmenue\n\t==========\n\n");
 	printf("(A)endern\n(B)eenden\n(D)rucken\n(E)ingeben\n(L)oeschen\n\n");
 	printf("Was wuenschen Sie zu tun ? ");
-	scanf("%c", &eingabe);
+
+	do {
+		scanf("%c", &eingabe);
+		if (!isalpha(eingabe)) {
+			printf("Bitte nur Zeichen eingeben.\n");
+			while ((c = getchar()) != '\n' && c != EOF);
+			valid = 0;
+		}
+		else {
+			valid = 1;
+		}		
+	} while (valid != 1);
+
 
 	switch (eingabe) {
 	case 'A':
