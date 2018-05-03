@@ -8,14 +8,23 @@
 
 /*--- #includes ------------------------------------------------------*/
 #include <stdio.h>
+#include <stdlib.h>
 
 
 int main(void)
 {
-	int jahr;
+	int jahr = 0, valid = 0;
+	char c;
 
-	printf("Gib ein Jahr ein: ");
-	scanf("%d", &jahr);
+
+	do {
+		printf("Gib eine gueltige Jahreszahl ein: ");
+		valid = scanf("%d", &jahr);
+		if (valid != 1) {
+			while ((c = getchar()) != '\n' && c != EOF);
+		}
+	} while (valid != 1);
+		
 
 	if (jahr % 4 == 0) {
 		if (jahr % 100 == 0) {
