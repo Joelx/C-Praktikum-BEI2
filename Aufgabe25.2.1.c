@@ -3,7 +3,7 @@
 
 
 void fuelleMatrix(int zeilen, int spalten, float *mat);
-void multipliziereMatrix(int zeilenA, int spaltenA, int zeilenB, int spaltenB, float *matA, float *matB, float *erg);
+void multipliziereMatrix(int zeilenA, int spaltenA, int spaltenB, float *matA, float *matB, float *erg);
 void gebeMatrixAus(int zeilen, int spalten, float *mat);
 
 int main()
@@ -49,7 +49,7 @@ int main()
 	gebeMatrixAus(zeiB, spB, (float *)matB);
 
 	float *erg = (float *)malloc(zeiA * spB * sizeof(float));
-	multipliziereMatrix(zeiA, spA, zeiB, spB, (float *)matA, (float *)matB, (float* )erg);
+	multipliziereMatrix(zeiA, spA, spB, (float *)matA, (float *)matB, (float* )erg);
 
 	printf("\nErgebnis Matrix: \n");
 	gebeMatrixAus(zeiA, spB, (float *)erg);
@@ -87,7 +87,7 @@ void gebeMatrixAus(int zeilen, int spalten, float *mat)
 
 }
 
-void multipliziereMatrix(int zeilenA, int spaltenA, int zeilenB, int spaltenB, float *matA, float *matB, float *erg)
+void multipliziereMatrix(int zeilenA, int spaltenA, int spaltenB, float *matA, float *matB, float *erg)
 {
 	int iZeile, iSpalte, k;
 
