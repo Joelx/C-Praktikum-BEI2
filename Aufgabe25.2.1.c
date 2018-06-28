@@ -3,7 +3,7 @@
 
 
 void fuelleMatrix(int zeilen, int spalten, float *mat);
-void multipliziereMatrix(int zeilen, int spalten, float *matA, float *matB, float *erg);
+void multipliziereMatrix(int zeilenA, int spaltenA, int zeilenB, int spaltenB, float *matA, float *matB, float *erg);
 void gebeMatrixAus(int zeilen, int spalten, float *mat);
 
 int main()
@@ -49,7 +49,7 @@ int main()
 	gebeMatrixAus(zeiB, spB, (float *)matB);
 
 	float *erg = (float *)malloc(zeiA * spB * sizeof(float));
-	multipliziereMatrix(zeiA, spB, (float *)matA, (float *)matB, (float* )erg);
+	multipliziereMatrix(zeiA, spA, zeiB, spB, (float *)matA, (float *)matB, (float* )erg);
 
 	printf("\nErgebnis Matrix: \n");
 	gebeMatrixAus(zeiA, spB, (float *)erg);
@@ -87,18 +87,21 @@ void gebeMatrixAus(int zeilen, int spalten, float *mat)
 
 }
 
-void multipliziereMatrix(int zeilen, int spalten, float *matA, float *matB, float *erg)
+void multipliziereMatrix(int zeilenA, int spaltenA, int zeilenB, int spaltenB, float *matA, float *matB, float *erg)
 {
 	int iZeile, iSpalte, k;
 
-	for (iZeile = 0; iZeile < zeilen; iZeile++)
-	{
-		for (iSpalte = 0; iSpalte < spalten; iSpalte++)
-		{
-			*((erg + iZeile * spalten) + iSpalte) = 0;
-			for (k = 0; k < zeilen; k++)
-				//erg[i][j] += matA[i][k] * matB[k][j];
-				*((erg + iZeile * spalten) + iSpalte) += (*((matA + iZeile * spalten) + k)) * (*((matB + k * spalten) + iSpalte));
+	for (iZeile = 0; iZeile < zeilenA; ++iZeile) {
+		for (iSpalte = 0; iSpalte < spaltenB; ++iSpalte) {
+			*((erg + iZeile * spaltenB) + iSpalte) = 0;
+		}
+	}
+
+	for (iZeile = 0; iZeile < zeilenA; ++iZeile) {
+		for (iSpalte = 0; iSpalte < spaltenB; ++iSpalte) {
+			for (k = 0; k < spaltenA; ++k) {
+				*((erg + iZeile * spaltenB) + iSpalte) += (*((matA + iZeile * spaltenA) + k)) * (*((matB + k * spaltenB) + iSpalte));
+			}
 		}
 	}
 }
